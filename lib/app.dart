@@ -14,9 +14,8 @@ class App extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-        home: BlocProvider<LottiePlayerBloc>(
-          create: (BuildContext context) 
-          },
+        home: BlocProvider(
+          create: (context) => LottiePlayerBloc(),
         ));
   }
 }
