@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'animation_controller.dart';
 import 'bloc/lottie_player_bloc.dart';
 
 class App extends StatelessWidget {
@@ -9,7 +8,18 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: BlocProvider(
+          create: (context) => LottiePlayerBloc(),
+          child: Scaffold(
+            appBar: AppBar(
+              // title: Text(widget.title),
+              title: const Text("Lottie player"),
+              centerTitle: true,
+              backgroundColor: Colors.red,
+            ),
+          )),
+    );
   }
 }
