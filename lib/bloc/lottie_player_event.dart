@@ -6,3 +6,7 @@ abstract class LottiePlayerEvent extends Equatable {
   @override
   List<Object> get props => [];
 }
+
+class LottiePlayerPlayButtonClicked extends LottiePlayerEvent {
+  const LottiePlayerPlayButtonClicked();
+}
