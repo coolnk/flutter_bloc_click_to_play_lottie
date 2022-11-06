@@ -16,7 +16,7 @@ class LottiePlayerInitialState extends LottiePlayerState {
 }
 
 class LottiePlayerAmimatedState extends LottiePlayerState {
-  final bool isPlaying;
+  final bool isPlaying; //you don't really need to send this in the constructor
   const LottiePlayerAmimatedState({required this.isPlaying});
 
   @override
