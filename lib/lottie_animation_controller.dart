@@ -17,21 +17,3 @@ class LottieAnimationController extends StatelessWidget {
     );
   }
 }
-
-class TextChangeController extends StatelessWidget {
-  final String text;
-
-  const TextChangeController({Key? key, required this.text}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        ElevatedButton(
-          onPressed: () => {},
-          child: const Text('Click here to change text'),
-        ),
-      ],
-    );
-  }
-}

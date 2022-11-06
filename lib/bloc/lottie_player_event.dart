@@ -8,5 +8,9 @@ abstract class LottiePlayerEvent extends Equatable {
 }
 
 class LottiePlayerPlayButtonClicked extends LottiePlayerEvent {
-  const LottiePlayerPlayButtonClicked();
+  final bool isPlaying;
+  const LottiePlayerPlayButtonClicked(this.isPlaying);
+
+  @override
+  List<Object> get props => [isPlaying];
 }

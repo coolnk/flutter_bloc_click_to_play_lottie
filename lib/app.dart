@@ -26,20 +26,22 @@ class App extends StatelessWidget {
                 child: BlocConsumer<LottiePlayerBloc, LottiePlayerState>(
                   listener: (context, state) {},
                   builder: (context, state) {
-                    // if (state is LottiePlayerInitialState) {
-                    //   return const LottieAnimationController(
-                    //     isPlaying: false,
-                    //   );
-                    // }
-                    if (state is LottiePlayerInitialState) {
-                      return const CircularProgressIndicator(
-                        color: Colors.cyan,
-                      );
-                    } else {
-                      return const Text('Something went wrong');
-                    }
+                    return Text('Coming soon...',
+                        style: GoogleFonts.comfortaa(textStyle: style));
                   },
                 ),
+              ),
+              floatingActionButton: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  FloatingActionButton(
+                      child: const Icon(Icons.play_arrow_rounded),
+                      onPressed: () => {
+                            context
+                                .read<LottiePlayerBloc>()
+                                .add(const LottiePlayerPlayButtonClicked(true))
+                          })
+                ],
               ))),
     );
   }
