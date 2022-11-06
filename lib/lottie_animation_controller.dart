@@ -23,12 +23,6 @@ class TextChangeController extends StatelessWidget {
 
   const TextChangeController({Key? key, required this.text}) : super(key: key);
 
-  // @override
-  // Widget build(BuildContext context) {
-  //   // TODO: implement build
-  //   throw UnimplementedError();
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Column(

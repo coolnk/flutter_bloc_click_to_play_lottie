@@ -16,25 +16,31 @@ class App extends StatelessWidget {
       home: BlocProvider(
           create: (context) => LottiePlayerBloc(),
           child: Scaffold(
-            appBar: AppBar(
-              title: Text('Lottie player',
-                  style: GoogleFonts.comfortaa(textStyle: style)),
-              centerTitle: true,
-              backgroundColor: Colors.cyan,
-            ),
-            body: BlocConsumer<LottiePlayerBloc, LottiePlayerState>(
-              listener: (context, state) {},
-              builder: (context, state) {
-                if (state is LottiePlayerInitialState) {
-                  return const CircularProgressIndicator(
-                    color: Colors.orange,
-                  );
-                } else {
-                  return const Text('Something went wrong');
-                }
-              },
-            ),
-          )),
+              appBar: AppBar(
+                title: Text('Lottie player',
+                    style: GoogleFonts.comfortaa(textStyle: style)),
+                centerTitle: true,
+                backgroundColor: Colors.cyan,
+              ),
+              body: Center(
+                child: BlocConsumer<LottiePlayerBloc, LottiePlayerState>(
+                  listener: (context, state) {},
+                  builder: (context, state) {
+                    // if (state is LottiePlayerInitialState) {
+                    //   return const LottieAnimationController(
+                    //     isPlaying: false,
+                    //   );
+                    // }
+                    if (state is LottiePlayerInitialState) {
+                      return const CircularProgressIndicator(
+                        color: Colors.cyan,
+                      );
+                    } else {
+                      return const Text('Something went wrong');
+                    }
+                  },
+                ),
+              ))),
     );
   }
 }
