@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lottie/lottie.dart';
 
 import 'bloc/lottie_player_bloc.dart';
+import 'widgets/lottie_animations.dart';
 
 class Home extends StatelessWidget {
   final style = const TextStyle(fontSize: 40, fontWeight: FontWeight.bold);
@@ -18,15 +18,7 @@ class Home extends StatelessWidget {
           centerTitle: true,
           backgroundColor: const Color.fromARGB(255, 14, 77, 61),
         ),
-        body: Center(
-          child: BlocBuilder<LottiePlayerBloc, LottiePlayerState>(
-            builder: (context, state) {
-              return Lottie.network(
-                'https://assets7.lottiefiles.com/packages/lf20_etjk2gn2.json',
-              );
-            },
-          ),
-        ),
+        body: const LottieAnimations(),
         floatingActionButton: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [

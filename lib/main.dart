@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_click_to_play_lottie/bloc/lottie_player_bloc.dart';
 
-import 'splash.dart';
+import 'screens/splash_screen.dart';
 
 void main() {
   runApp(const App());
