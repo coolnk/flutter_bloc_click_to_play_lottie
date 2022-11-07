@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_bloc_click_to_play_lottie/bloc/lottie_player_bloc.dart';
 
 import 'splash.dart';
 
@@ -10,6 +12,9 @@ class App extends StatelessWidget {
   const App({super.key});
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: SplashScreen());
+    return BlocProvider(
+      create: (context) => LottiePlayerBloc(),
+      child: const MaterialApp(home: SplashScreen()),
+    );
   }
 }
