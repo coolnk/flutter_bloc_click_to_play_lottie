@@ -8,17 +8,15 @@ abstract class LottiePlayerState extends Equatable {
 }
 
 class LottiePlayerInitialState extends LottiePlayerState {
-  final bool isPlaying;
-  const LottiePlayerInitialState({required this.isPlaying});
+  const LottiePlayerInitialState();
 
   @override
-  List<Object> get props => [isPlaying];
+  List<Object> get props => [];
 }
 
 class LottiePlayerAmimatedState extends LottiePlayerState {
-  final bool isPlaying; //you don't really need to send this in the constructor
-  const LottiePlayerAmimatedState({required this.isPlaying});
+  const LottiePlayerAmimatedState();
 
   @override
-  List<Object> get props => [isPlaying];
+  List<Object> get props => [];
 }

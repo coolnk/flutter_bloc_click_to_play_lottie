@@ -5,10 +5,10 @@ part 'lottie_player_event.dart';
 part 'lottie_player_state.dart';
 
 class LottiePlayerBloc extends Bloc<LottiePlayerEvent, LottiePlayerState> {
-  LottiePlayerBloc() : super(const LottiePlayerInitialState(isPlaying: false)) {
+  LottiePlayerBloc() : super(const LottiePlayerInitialState()) {
     on<LottiePlayerPlayButtonClicked>((event, emit) {
       if (state is LottiePlayerAmimatedState) {
-        emit(LottiePlayerAmimatedState(isPlaying: event.isPlaying));
+        emit(LottiePlayerAmimatedState());
       }
     });
   }

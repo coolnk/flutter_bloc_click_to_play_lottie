@@ -33,9 +33,9 @@ class Home extends StatelessWidget {
             FloatingActionButton(
                 backgroundColor: const Color.fromARGB(255, 215, 112, 9),
                 onPressed: () => {
-                      // context
-                      //     .read<LottiePlayerBloc>()
-                      //     .add(const LottiePlayerPlayButtonClicked(true))
+                      context
+                          .read<LottiePlayerBloc>()
+                          .add(const LottiePlayerPlayButtonClicked())
                     },
                 child: const Icon(Icons.play_arrow))
           ],
