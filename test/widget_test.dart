@@ -6,7 +6,7 @@
 // tree, read text, and verify that the values of widget properties are correct.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_click_to_play_lottie/app.dart';
+import 'package:flutter_bloc_click_to_play_lottie/main.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

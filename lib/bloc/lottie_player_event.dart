@@ -1,15 +1,15 @@
 part of 'lottie_player_bloc.dart';
 
 abstract class LottiePlayerEvent extends Equatable {
-  const LottiePlayerEvent();
+  const LottiePlayerEvent(bool bool);
 
   @override
   List<Object> get props => [];
 }
 
 class LottiePlayerPlayButtonClicked extends LottiePlayerEvent {
-  final bool isPlaying;
-  const LottiePlayerPlayButtonClicked(this.isPlaying);
+  bool isPlaying = false;
+  LottiePlayerPlayButtonClicked({required this.isPlaying}) : super(false);
 
   @override
   List<Object> get props => [isPlaying];

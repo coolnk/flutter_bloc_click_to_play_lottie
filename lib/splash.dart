@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 
-import 'app.dart';
+import 'home.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -28,12 +28,6 @@ class _SplashScreenState extends State<SplashScreen>
   Widget build(BuildContext context) {
     const style = TextStyle(fontSize: 40, fontWeight: FontWeight.bold);
     return Scaffold(
-        // appBar: AppBar(
-        //   title:
-        //       Text('मेरा कथाहरू', style: GoogleFonts.baloo2(textStyle: style)),
-        //   centerTitle: true,
-        //   backgroundColor: Colors.cyan,
-        // ),
         body: Center(
       child: Lottie.network(
         'https://assets2.lottiefiles.com/packages/lf20_uBcVylM68q.json',
